@@ -554,7 +554,12 @@ const char* GetOdgovorNaDrugoPitanje() {
 }
 
 void main() {
-	
+	cout << PORUKA;
+	cin.get();
+	cout << GetOdgovorNaPrvoPitanje() << endl;
+	cin.get();
+	cout << GetOdgovorNaDrugoPitanje() << endl;
+	cin.get();
 	/*
 	Globalna funkcija GenerisiID vraca ID igraca na osnovu vrijednosti
    proslijedjenih parametara. Funkcija generise
