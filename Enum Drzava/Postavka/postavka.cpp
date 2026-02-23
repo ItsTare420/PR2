@@ -151,15 +151,15 @@ void main() {
 	cin.get();
 	/*
 	Globalna funkcija GenerisiID vraca ID igraca na osnovu vrijednosti proslijedjenih parametara. Funkcija generise
-	ID sa maksimalno 4 cifre, ne racunajuci inicijale, tj. zadnje slovo imena i prvo slovo prezimena.
+	ID sa maksimalno 4 cifre, ne racunajuci inicijale, tj. prvo slovo imena i prvo slovo prezimena.
 	Podrazumijeva se da ce uvijek biti proslijedjene validne vrijednosti parametara. Ukoliko se proslijede
 	mala slova imena ili prezimena, potrebno ih je konvertovati u velika.
 	U okviru generisanog ID-a, proslijedjena cjelobrojna vrijednost treba biti u obrnutom redoslijedu cifara.
 	*/
-	cout << GenerisiID("Denis Music", 3) << endl;//treba vratiti S0003M
-	cout << GenerisiID("jasmin azemovic", 14) << endl;//treba vratiti N0041A
-	cout << GenerisiID("Goran skondric", 156) << endl;//treba vratiti N0651S
-	cout << GenerisiID("emina Junuz", 1798) << endl;//treba vratiti A8971J
+	cout << GenerisiID("Denis Music", 3) << endl;//treba vratiti D000M3
+	cout << GenerisiID("jasmin azemovic", 14) << endl;//treba vratiti J00A41
+	cout << GenerisiID("Goran skondric", 156) << endl;//treba vratiti G0S651
+	cout << GenerisiID("emina Junuz", 1798) << endl;//treba vratiti EJ8971
 
 	//Za validaciju ID-a koristiti funkciju ValidirajID koja treba, koristeci regex, osigurati postivanje osnovnih pravila
 	//Vezanih za format koja su definisana u prethodnom dijelu zadatka.
