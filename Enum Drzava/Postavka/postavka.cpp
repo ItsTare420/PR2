@@ -157,20 +157,20 @@ void main() {
 	U okviru generisanog ID-a, proslijedjena cjelobrojna vrijednost treba biti u obrnutom redoslijedu cifara.
 	*/
 	cout << GenerisiID("Denis Music", 3) << endl;//treba vratiti D000M3
-	cout << GenerisiID("jasmin azemovic", 14) << endl;//treba vratiti J00A41
-	cout << GenerisiID("Goran skondric", 156) << endl;//treba vratiti G0S651
-	cout << GenerisiID("emina Junuz", 1798) << endl;//treba vratiti EJ8971
+cout << GenerisiID("Jasmin Azemovic", 14) << endl;//treba vratiti J00A41
+cout << GenerisiID("Goran Skondric", 156) << endl;//treba vratiti G0S651
+cout << GenerisiID("emina junuz", 1798) << endl;//treba vratiti EJ8971
 
-	//Za validaciju ID-a koristiti funkciju ValidirajID koja treba, koristeci regex, osigurati postivanje osnovnih pravila
-	//Vezanih za format koja su definisana u prethodnom dijelu zadatka.
-	if (ValidirajID("S0003M"))
-		cout << "ID VALIDAN" << endl;
-	if (ValidirajID("N0041A"))
-		cout << "ID VALIDAN" << endl;
-	if (!ValidirajID("N00651S"))
-		cout << "ID NIJE VALIDAN" << endl;
-	if (!ValidirajID("a8971j"))
-		cout << "ID NIJE VALIDAN" << endl;
+//Za validaciju ID-a koristiti funkciju ValidirajID koja treba, koristeci regex, osigurati postivanje osnovnih pravila
+//vezanih za format koja su definisana u prethodnom dijelu zadatka.
+if (ValidirajID("D000M3"))
+	cout << "ID VALIDAN" << endl;
+if (ValidirajID("J00A41"))
+	cout << "ID VALIDAN" << endl;
+if (!ValidirajID("G00S651"))
+	cout << "ID NIJE VALIDAN" << endl;
+if (!ValidirajID("Ej8971"))
+	cout << "ID NIJE VALIDAN" << endl;
 	int kolekcijaTestSize = 9;
 	Kolekcija<int, int, 10> kolekcija1;
 	for (int i = 0; i < kolekcijaTestSize; i++)
