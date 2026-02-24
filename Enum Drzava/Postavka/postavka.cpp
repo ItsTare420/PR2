@@ -127,22 +127,20 @@ public:
 	vector<Igrac>& GetIgraci() { return _igraci; }
 };
 class Prventstvo {
-	Kolekcija<Reprezentacija*, Reprezentacija*, 20> _utakmice;
+	Kolekcija<Reprezentacija, Reprezentacija, 20> _utakmice;
 public:
-	Kolekcija<Reprezentacija*, Reprezentacija*, 20>& GetUtakmice() {
+	Kolekcija<Reprezentacija, Reprezentacija, 20>& GetUtakmice() {
 		return _utakmice;
 	}
 };
-
 const char* GetOdgovorNaPrvoPitanje() {
-	cout << "Pitanje -> Objasnite tipove nasljedivanja \n";
+	cout << "Pitanje -> Pojasnite osnovne preduslove koji moraju biti ispunjeni da bi se realizovao polimorfizam(navesti kratki primjer) ? \n";
 	return "Odgovor -> OVDJE UNESITE VAS ODGOVOR";
 }
 const char* GetOdgovorNaDrugoPitanje() {
-	cout << "Pitanje -> Objasnite lambda funkcije? \n";
+	cout << "Pitanje -> Pojasnite razloge koristenja kljucnih rijeci abstract i ciste virtualne metode, te razlike izmedju njih ? \n";
 	return "Odgovor -> OVDJE UNESITE VAS ODGOVOR";
 }
-
 void main() {
 	cout << PORUKA;
 	cin.get();
@@ -204,7 +202,7 @@ void main() {
 	metoda treba baciti izuzetak. Na kraju, metoda treba da vrati
     novi objekat tipa kolekcija koji sadrzi samo uklonjene
    elemente*/
-
+	
 	Kolekcija<int, int, 10> kolekcija3 = kolekcija1.RemoveRange(1, 3);
 	cout << kolekcija3 << endl;
 	cout << kolekcija1 << crt;
@@ -298,7 +296,7 @@ void main() {
 	vector<Igrac*> igraci = euro2024(2);
 	for (size_t i = 0; i < igraci.size(); i++)
 		cout << igraci[i]->GetImePrezime() << endl;
-
+	
 	cin.get();
 	system("pause>0");
 }
