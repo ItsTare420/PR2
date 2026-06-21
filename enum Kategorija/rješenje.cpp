@@ -198,7 +198,7 @@ public:
 		stringstream ss;
 		ss << setfill('0') << setw(2) << GetDan() << "."
 			<< setfill('0') << setw(2) << GetMjesec() << "."
-			<< setfill('0') << setw(2) << GetGodina() << " "
+			<< setfill('0') << GetGodina() << " "
 			<< setfill('0') << setw(2) << GetSati() << ":"
 			<< setfill('0') << setw(2) << GetMinute() << ":"
 			<< setfill('0') << setw(2) << GetSekunda();
