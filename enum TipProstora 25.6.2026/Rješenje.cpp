@@ -40,8 +40,8 @@ string GenerisiSifru(const char* imePrezime, int redniBroj) {
 	int godina = lokalnoVrijeme.tm_year + 1900;
 
 	sifra += "CW-";
-	sifra += imePrezimeString[0];
-	sifra += imePrezimeString[prezimeIndeks];
+	sifra += toupper(imePrezimeString[0]);
+	sifra += toupper(imePrezimeString[prezimeIndeks]);
 	sifra += "-";
 	if (redniBroj < 10)sifra += "00";
 	else if (redniBroj < 100)sifra += "0";
