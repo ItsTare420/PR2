@@ -107,7 +107,7 @@ public:
 	friend ostream& operator<<(ostream& COUT, Korisnik& obj) {
 		COUT << obj._imePrezime << " [" << obj._sifra << "]" << endl;
 		for (auto& rezervacija : obj._rezervacije)
-			//ToString metoda klase Rezervacija vraca podatke o rezervaciji u formatu :
+		//ToString metoda klase Rezervacija vraca podatke o rezervaciji u formatu :
 		//10.09.2026 09:00 SALA-A SALA 60 min
 		COUT << " - " << rezervacija.ToString() << endl;
 		return COUT;
@@ -142,9 +142,9 @@ int main() {
 	cout << GetOdgovorNaDrugoPitanje() << crt;
 	cin.get();
 	//funkcija generise sifru korisnika na osnovu imena i prezimena, rednog broja i trenutne godine.
-		//sifra je u formatu CW-IN-BBB/GGGG, gdje IN predstavlja inicijale, BBB redni broj korisnika
-		//popunjen nulama na slobodnim mjestima, a GGGG trenutnu godinu dobijenu iz sistema.
-		//funkciju koristiti u konstruktoru klase Korisnik za inicijalizaciju atributa _sifra.
+	//sifra je u formatu CW-IN-BBB/GGGG, gdje IN predstavlja inicijale, BBB redni broj korisnika
+	//popunjen nulama na slobodnim mjestima, a GGGG trenutnu godinu dobijenu iz sistema.
+	//funkciju koristiti u konstruktoru klase Korisnik za inicijalizaciju atributa _sifra.
 	if (GenerisiSifru("Amina Buric", 3) == "CW-AB-003/2026")
 			cout << "Sifra OK" << crt;
 	if (GenerisiSifru("Amar Macic", 15) == "CW-AM-015/2026")
@@ -152,7 +152,7 @@ int main() {
 	if (GenerisiSifru("Maid Ramic", 156) == "CW-MR-156/2026")
 		cout << "Sifra OK" << crt;
 	//koristeci regex, funkcija ValidirajSifru provjerava da li je sifra zapisana u prethodno
-		//definisanom formatu. funkcija vraca true ako je sifra validna, u suprotnom vraca false.
+	//definisanom formatu. funkcija vraca true ako je sifra validna, u suprotnom vraca false.
 	if (ValidirajSifru("CW-AB-003/2026"))
 			cout << "SIFRA VALIDNA" << crt;
 	if (!ValidirajSifru("CW-Ab-003/2026") && !ValidirajSifru("CW-AB-03 / 2026") &&
@@ -192,7 +192,7 @@ int main() {
 	cout << salaA.ToString() << crt;
 	//10.09.2026 09:00 SALA-A SALA 60 min
 	//ImaKonfliktSa vraca true ako su rezervacije istog datuma i njihovi vremenski intervali
-		//se preklapaju. rezervacija koja pocinje u trenutku kada prethodna zavrsava nije konfliktna.
+	//se preklapaju. rezervacija koja pocinje u trenutku kada prethodna zavrsava nije konfliktna.
 	if (salaA.ImaKonfliktSa(studio1))
 		cout << "Termini se preklapaju" << crt;
 	if (!salaA.ImaKonfliktSa(radnoMjesto))
@@ -226,12 +226,12 @@ int main() {
 	if (radniKutak.RegistrujRezervaciju(goran.GetSifra(),goranovaSala))
 		cout << "Rezervacija registrovana" << crt;
 	//AktivniKorisnici vraca pokazivace na korisnike koji imaju najmanje onoliko rezervacija
-		//koliko je definisano vrijednoscu proslijedjenog parametra.
+	//koliko je definisano vrijednoscu proslijedjenog parametra.
 	vector<Korisnik*> aktivni = radniKutak.AktivniKorisnici(1);
 	for (auto korisnik : aktivni)
 		cout << korisnik->GetImePrezime() << " ima " << korisnik -> GetRezervacije().size()<< " rezervacija" << crt;
 	//KoristenjePoTipu vraca kolekciju parova (korisnik, broj minuta) za sve korisnike koji
-		//imaju najmanje jednu rezervaciju prostora proslijedjenog tipa.
+	//imaju najmanje jednu rezervaciju prostora proslijedjenog tipa.
 	Kolekcija<Korisnik, int, 50> koristenjeSala =
 	radniKutak.KoristenjePoTipu(SALA);
 	for (int i = 0; i < koristenjeSala.GetTrenutno(); i++)
@@ -253,9 +253,7 @@ int main() {
 	Funkcija vraca true ako je ucitan najmanje jedan novi podatak, a
 	false ako datoteka ne
 	postoji ili nije ucitan nijedan novi podatak.
-	Primjer sadrzaja datoteke:Fakultet informacijskih tehnologija
-	Pismeni dio ispita iz predmeta Programiranje II – 25.06.2026
-	7
+	Primjer sadrzaja datoteke:
 	Radni kutak|Emina Junuz
 	Radni kutak|Jasmin Azemovic
 	Poslovna zona|Zanin Vejzovic
