@@ -454,7 +454,7 @@ int main() {
 	cout << termini << crt;
 	//DodajNaPoziciju dodaje novi par na lokaciju definisanu prvim parametrom, pomjera postojece
 	//elemente udesno i vraca trenutno stanje kolekcije. u slucaju popunjene kolekcije ili
-	//neispravne lokacije potrebno je baciti izuzetak.
+	//neispravne lokacije potrebno je baciti izuzetak. 
 	Kolekcija<int, string, 20> prosireniTermini = termini.DodajNaPoziciju(2, 99, "Poseban termin");
 	cout << prosireniTermini << crt;
 	//UkloniRaspon od lokacije definisane prvim parametrom uklanja broj elemenata definisan
