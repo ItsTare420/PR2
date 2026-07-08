@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-string crt = "\n-------------------------------------------------------------------------------- - \n";
+string crt = "\n---------------------------------------------------------------------------------\n";
 string PORUKA_TELEFON = crt + "TELEFONE ISKLJUCITE I ODLOZITE U TORBU, DZEP ILI DRUGU LOKACIJU VAN DOHVATA.\n"
 "CESTO SE NA TELEFONIMA (PRO)NALAZE PROGRAMSKI KODOVI KOJI MOGU BITI ISKORISTENI ZA\n"
 "RJESAVANJE ISPITNOG ZADATKA, STO CE, U SLUCAJU PRONALASKA, BITI SANKCIONISANO." + crt;
