@@ -322,9 +322,9 @@ public:
 	bool DodajPosudbu(const Posudba& novaPosudba) {
 		int brojPosudbi = 0;
 		for (auto& posudba : _posudbe) {
+			brojPosudbi++;
 			if (strcmp(posudba.GetNaslov(), novaPosudba.GetNaslov()) == 0)
 				return false;
-			brojPosudbi++;
 		}
 		if (brojPosudbi >= 3)return false;
 		if (novaPosudba.GetBrojDana() < 1 || novaPosudba.GetBrojDana() > 30)
@@ -384,9 +384,7 @@ public:
 	vector<ClanBiblioteke*> AktivniClanovi(const int& broj) {
 		vector<ClanBiblioteke*> rezultat;
 		for (auto& clan : _clanovi) {
-			int brojPosudbi = 0;
-			brojPosudbi += clan.GetPosudbe().size();
-			if (brojPosudbi >= broj)
+			if (clan.GetPosudbe().size() >= broj)
 				rezultat.push_back(new ClanBiblioteke(clan));
 		}
 		return rezultat;
